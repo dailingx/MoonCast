@@ -442,14 +442,14 @@ if __name__ == "__main__":
     }
 
 
-    audio_bytes_gen = model.inference(zh_test_json, streaming=True)
-    audio = AudioSegment.empty()
-    for cur_chunk in audio_bytes_gen:
-        cur_chunk = base64.b64decode(cur_chunk)
-        audio_chunk = AudioSegment.from_file(io.BytesIO(cur_chunk), format="mp3")
-        audio += audio_chunk
-    audio.export("tmp_generated_zh_stream.mp3", format="mp3")
-    print("zh stream done")
+    # audio_bytes_gen = model.inference(zh_test_json, streaming=True)
+    # audio = AudioSegment.empty()
+    # for cur_chunk in audio_bytes_gen:
+    #     cur_chunk = base64.b64decode(cur_chunk)
+    #     audio_chunk = AudioSegment.from_file(io.BytesIO(cur_chunk), format="mp3")
+    #     audio += audio_chunk
+    # audio.export("tmp_generated_zh_stream.mp3", format="mp3")
+    # print("zh stream done")
     
 
     audio_bytes = model.inference(zh_test_json)
@@ -488,10 +488,10 @@ if __name__ == "__main__":
             }
         ]
     }
-    audio_bytes = model.inference(en_test_json)
-    file_to_save = open(f"tmp_generated_en.mp3", "wb")
-    file_to_save.write(base64.b64decode(audio_bytes))
-    print("en done")
+    # audio_bytes = model.inference(en_test_json)
+    # file_to_save = open(f"tmp_generated_en.mp3", "wb")
+    # file_to_save.write(base64.b64decode(audio_bytes))
+    # print("en done")
 
 
     # also support inference without prompt
@@ -556,7 +556,7 @@ if __name__ == "__main__":
             }
         ]
     }
-    audio_bytes = model.inference(without_prompt_test_json)
-    file_to_save = open(f"tmp_generated_woprompt.mp3", "wb")
-    file_to_save.write(base64.b64decode(audio_bytes))
-    print("without prompt done")
+    # audio_bytes = model.inference(without_prompt_test_json)
+    # file_to_save = open(f"tmp_generated_woprompt.mp3", "wb")
+    # file_to_save.write(base64.b64decode(audio_bytes))
+    # print("without prompt done")
