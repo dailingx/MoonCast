@@ -369,12 +369,16 @@ if __name__ == "__main__":
     zh_test_json = {
         "role_mapping": {
             "0": {
-                "ref_audio": "./zh_prompt0.wav",
-                "ref_text": "可以每天都骑并且可能会让你爱上骑车，然后通过爱上骑车的你省了很多很多钱。", #asr output
+                # "ref_audio": "./zh_prompt0.wav",
+                # "ref_text": "可以每天都骑并且可能会让你爱上骑车，然后通过爱上骑车的你省了很多很多钱。", #asr output
+                "ref_audio": "./mayun.WAV",
+                "ref_text": "我从来没碰过钱，我对钱没有兴趣，因为我最快乐的时候，是一个月拿九十一块钱，我当老师的时候。",
             },
             "1": {
-                "ref_audio": "./zh_prompt1.wav",
-                "ref_text": "他最后就能让同样食材炒出来的菜味道大大提升。" #asr output
+                # "ref_audio": "./zh_prompt1.wav",
+                # "ref_text": "他最后就能让同样食材炒出来的菜味道大大提升。" #asr output
+                "ref_audio": "./sabeier.WAV",
+                "ref_text": "我想用我的青春换取您全部的财富，您会换吗，我九九年的。"  # asr output
             }
         },      
         "dialogue": [
